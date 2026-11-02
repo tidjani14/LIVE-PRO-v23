@@ -1,0 +1,48 @@
+# =============================================================================
+# LIVE PRO v26.0 — قاعدة بيانات السيرفرات والهوستات السرية للاكتشاف التلقائي الذكي (data.txt)
+# الصيغة: اسم السيرفر|رابط الهوست (ServerName|http://host:port)
+# ملاحظة أمنية: هذا الملف محمي عبر .htaccess ولا يظهر أي رابط هوست منه للمستخدم نهائياً.
+# =============================================================================
+Temu VIP|http://tmasta.com
+King 365|http://179.61.217.72
+Nexon|http://serine-tv.xyz
+LIVE PRO VIP 4K|http://tvflux4k.com:8080
+IRON PRO MAX|http://line.iron-ott.com:80
+IRON TV PRO|http://irontvpro.com:8080
+KING 365 4K|http://line.king365tv.com:8080
+KING 4K OTT|http://king4k-ott.com:8080
+TREX 4K OTT|http://line.trex-ott.com:80
+TREX VIP|http://trex-panel.com:8080
+DINO IPTV|http://line.dino-iptv.com:8080
+DINO PLUS|http://dino-ott.net:8080
+STRONG 8K UHD|http://line.strong8k.com:8080
+STRONG 4K VIP|http://strong4k.me:8080
+MEGA OTT PRO|http://line.megaott.net:80
+MEGA VIP 4K|http://mega-ott.com:8080
+CRYSTAL OTT|http://line.crystal-ott.com:8080
+CRYSTAL VIP|http://crystal-tv.net:8080
+MAGNUM 4K|http://magnum-ott.net:80
+GOLD TV VIP|http://line.goldtv.cc:8080
+ATLAS PRO ONTV|http://atlas-ontv.com:8080
+ATLAS VIP 4K|http://line.atlaspro.tv:8080
+LYNX IPTV 4K|http://lynx-iptv.net:8080
+SANSAT PRO|http://sansat-ott.com:8080
+GOOL PRO TV|http://gool-tv.com:8080
+STAR SHARE 4K|http://starshare.live:8080
+STAR 4K OTT|http://line.starshare.org:8080
+LIONZ TV VIP|http://lionz-tv.com:8080
+ZENITH 4K|http://zenith-ott.com:8080
+COBRA ULTRA|http://cobra-ott.com:8080
+FALCON PRO 4K|http://falcon-iptv.net:8080
+SPIDER OTT VIP|http://spider-ott.com:8080
+B1G OTT 4K|http://line.b1g-ott.com:8080
+EAGLE 4K VIP|http://line.eagle4k.cc:8080
+MAX OTT PRO|http://line.maxott.net:8080
+ROYAL 4K TV|http://royal4k-ott.com:8080
+AROMA VIP 4K|http://aroma-ott.com:8080
+DIAMOND 4K OTT|http://diamond-ott.net:8080
+PLATINUM IPTV|http://platinum-ott.com:8080
+NOVA 4K OTT|http://nova-iptv.net:8080
+INFINITY 4K|http://infinity-ott.com:8080
+MATADOR PRO|http://matador-ott.com:8080
+HAWK 4K VIP|http://hawk-ott.net:8080
