@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--
+      LIVE PRO production network policy:
+      - Cleartext (HTTP) is PERMITTED globally because Xtream/IPTV panels are almost always
+        http://host:port and user-added servers cannot be pre-listed as domains.
+      - HTTPS still uses system + user CA trust anchors.
+    -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
