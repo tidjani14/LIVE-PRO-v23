@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.token
+.git_askpass.sh
+push_to_github.sh
+download_cloud_apk.sh
+build.sh
