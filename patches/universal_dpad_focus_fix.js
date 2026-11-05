@@ -54,7 +54,6 @@
 
   document.addEventListener('keydown', handleKey, true);
 
-  // ضمان بدء التركيز على أول عنصر
   window.addEventListener('load', () => {
     const items = getFocusables();
     if (items.length) items[0].focus();
