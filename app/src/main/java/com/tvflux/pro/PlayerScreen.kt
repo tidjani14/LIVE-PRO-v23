@@ -504,7 +504,7 @@ fun PlayerScreen(
     // failures. HTTP 301/302/307 redirects are handled by the HTTP data source and are
     // not treated as playback errors; never switch codecs/formats merely because of a redirect.
     val lightningProbeErrorPolicy = remember {
-        object : DefaultLoadErrorHandlingPolicy(3) {
+        object : DefaultLoadErrorHandlingPolicy(5) {
             override fun getMinimumLoadableRetryCount(dataType: Int): Int = 3
 
             override fun getRetryDelayMsFor(
@@ -1116,7 +1116,7 @@ fun PlayerScreen(
                                     break
                                 }
                             }
-                            if (formatCandidateUrls.size > 1 && candidateIndex < 1) {
+                            if (formatCandidateUrls.size > 1 && candidateIndex < 0) {
                                 isSeamlessMqTransition = true
                                 candidateIndex++
                                 formatAttemptMode = 0
@@ -1196,7 +1196,7 @@ fun PlayerScreen(
                         errorMessage = null
                         // Let ExoPlayer replace/cancel only its own media request.
                         // Keep shared API calls and pooled sockets alive during reconnect.
-                        if (formatCandidateUrls.size > 1 && candidateIndex < formatCandidateUrls.size - 1) {
+                        if (formatCandidateUrls.size > 1 && candidateIndex < 0) {
                             candidateIndex += 1
                             formatAttemptMode = 0
                             break
@@ -1250,7 +1250,7 @@ fun PlayerScreen(
                                 break
                             }
                         }
-                        if (formatCandidateUrls.size > 1 && candidateIndex < 1) {
+                        if (formatCandidateUrls.size > 1 && candidateIndex < 0) {
                             isSeamlessMqTransition = true
                             candidateIndex++
                             formatAttemptMode = 0
@@ -4133,7 +4133,7 @@ fun LiveMiniPreviewPlayer(
                         return
                     }
                 }
-                if (formatCandidateUrls.size > 1 && candidateIndex < formatCandidateUrls.size - 1) {
+                if (formatCandidateUrls.size > 1 && candidateIndex < 0) {
                     candidateIndex += 1
                     miniFormatAttemptMode = 0
                 } else if (retryCount < 3) {
@@ -4306,7 +4306,7 @@ fun LiveMiniPreviewPlayer(
                                 break
                             }
                         }
-                        if (formatCandidateUrls.size > 1 && candidateIndex < formatCandidateUrls.size - 1) {
+                        if (formatCandidateUrls.size > 1 && candidateIndex < 0) {
                             candidateIndex++
                             miniFormatAttemptMode = 0
                             break
@@ -4363,7 +4363,7 @@ fun LiveMiniPreviewPlayer(
                                 break
                             }
                         }
-                        if (formatCandidateUrls.size > 1 && candidateIndex < formatCandidateUrls.size - 1) {
+                        if (formatCandidateUrls.size > 1 && candidateIndex < 0) {
                             candidateIndex++
                             miniFormatAttemptMode = 0
                             break

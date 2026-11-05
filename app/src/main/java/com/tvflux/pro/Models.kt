@@ -448,27 +448,27 @@ enum class BufferProfile(
     XPOLA_ZERO_LAG(
         "فتح خاطف 4K UHD (EXO+FFMPEG: 120ms / Rebuffer 750ms / 2s→24s / 64MB — افتراضي)",
         "فتح فوري كالبرق لقنوات 4K UHD و FHD مع ExoPlayer + FFmpeg ومخزن 64MB يمنع التقطيع نهائياً",
-        2_000, 24_000, 120, 750, 64 * 1024 * 1024, 6_000
+        2_000, 24_000, 900, 2_000, 64 * 1024 * 1024, 6_000
     ),
     TURBO_INSTANT(
         "فتح فوري أقصى (TURBO: 100ms / Rebuffer 600ms / 1.5s→18s / 56MB)",
         "أسرع فتح ممكن للبث المباشر وقنوات 4K عبر ExoPlayer + FFmpeg — بدون أي انتظار إطلاقاً",
-        1_500, 18_000, 100, 600, 56 * 1024 * 1024, 4_000
+        1_500, 18_000, 700, 1_500, 56 * 1024 * 1024, 4_000
     ),
     BALANCED(
         "متوازن 4K UHD (300ms / Rebuffer 1200ms / 3s→28s / 64MB)",
         "توازن مثالي بين سرعة الفتح وثبات قنوات 4K HEVC 10-bit",
-        3_000, 28_000, 300, 1_200, 64 * 1024 * 1024, 8_000
+        3_000, 28_000, 700, 1_800, 64 * 1024 * 1024, 8_000
     ),
     ULTRA_STABLE(
         "ثبات أقصى 4K UHD (500ms / Rebuffer 1800ms / 5s→35s / 64MB)",
         "للشبكات المتذبذبة وقنوات 4K RAW ذات البيتريت العالي جداً",
-        5_000, 35_000, 500, 1_800, 64 * 1024 * 1024, 10_000
+        5_000, 35_000, 900, 2_500, 64 * 1024 * 1024, 10_000
     ),
     LITE_LOW_RAM(
         "أجهزة ضعيفة / TV Box (220ms / Rebuffer 1000ms / 2s→18s / 36MB)",
         "فتح سريع مع إدارة ذاكرة ذكية على شاشات Android TV",
-        2_000, 18_000, 220, 1_000, 36 * 1024 * 1024, 4_000
+        2_000, 18_000, 600, 1_500, 36 * 1024 * 1024, 4_000
     )
 }
 
@@ -1024,8 +1024,8 @@ object MultiQualityEngine {
     /** Min time between non-outage quality switches (avoids bounce / annoyance). */
     private val lastQualitySwitchAtMs = java.util.concurrent.ConcurrentHashMap<String, Long>()
     private val telemetrySnapshots = java.util.concurrent.ConcurrentHashMap<String, AbrTelemetrySnapshot>()
-    private const val MIN_SWITCH_COOLDOWN_MS = 35_000L
-    private const val MIN_UPGRADE_COOLDOWN_MS = 90_000L
+    private const val MIN_SWITCH_COOLDOWN_MS = 60_000L
+    private const val MIN_UPGRADE_COOLDOWN_MS = 180_000L
     private const val MIN_OUTAGE_SWITCH_COOLDOWN_MS = 4_000L
     @Volatile private var liveCatalogReference: List<TvChannel> = emptyList()
     @Volatile private var lastCatalogIdentityHash: Int = 0
